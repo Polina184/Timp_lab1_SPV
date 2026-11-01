@@ -37,3 +37,17 @@ return "RETRY: " + item.Name + "; attempts=" + item.Attempts;
 | `dotnet run -- edge` | a/2, b/3 | RETRY: a; attempts=2, Slots: 1 |
 | `dotnet run -- over` | over/4 | Slots: 0 |
 | `dotnet run -- own` | build/1, deploy/2, test/5, lint/0 | RETRY: build; attempts=1, RETRY: deploy; attempts=2, RETRY: lint; attempts=0, Slots: 6 |
+
+## Требования
+
+.NET SDK 10.0 или новее (целевая платформа net10.0).
+
+## Исходный репозиторий
+
+`git-lab.bundle` содержит полную исходную историю, ветки `main`, `feature/a`,
+`feature/b` и тег `lab-base`. Для восстановления исходных идентификаторов
+коммитов и тега выполните:
+
+```powershell
+git clone git-lab.bundle GitLab
+```
